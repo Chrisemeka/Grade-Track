@@ -1,7 +1,4 @@
-// src/pages/student/Dashboard.jsx
 import React from 'react';
-import BaseLayout from '../../pages/Layout/StudentLayout';
-import StudentSidebar from '../../components/common/StudentSideBar';
 
 const StudentDashboard = () => {
   return (
@@ -19,7 +16,7 @@ const StudentDashboard = () => {
       </div>
 
       {/* Performance Overview */}
-      <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-4">
+      {/* <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-4">
         {[
           { semester: 'Overall GPA', grade: '3.8' },
         ].map((item) => (
@@ -32,10 +29,10 @@ const StudentDashboard = () => {
             </p>
           </div>
         ))}
-      </div>
+      </div> */}
 
       {/* Upcoming Assignments */}
-      <div className="flex flex-col gap-4">
+      {/* <div className="flex flex-col gap-4">
         <h3 className="text-[#0e161b] text-[22px] font-bold leading-tight tracking-[-0.015em]">
           Upcoming Assignments
         </h3>
@@ -62,12 +59,12 @@ const StudentDashboard = () => {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
 
       {/* Recent Feedback */}
       <div className="flex flex-col gap-4">
         <h3 className="text-[#0e161b] text-[22px] font-bold leading-tight tracking-[-0.015em]">
-          Recent Assignment Feedback
+          Recent Class Feedback
         </h3>
         
         <div className="flex flex-col gap-2">
@@ -127,16 +124,6 @@ const StudentDashboard = () => {
   );
 };
 
-// Wrap the dashboard with the layout
-// const StudentDashboardPage = () => {
-//   return (
-//     <BaseLayout
-//       userRole="student"
-//       Sidebar={StudentSidebar}
-//     >
-//       <StudentDashboard />
-//     </BaseLayout>
-//   );
-// };
+
 
 export default StudentDashboard;

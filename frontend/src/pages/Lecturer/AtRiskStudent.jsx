@@ -1,7 +1,4 @@
-// src/pages/lecturer/AtRiskStudents.jsx
 import React, { useState } from 'react';
-import BaseLayout from '../../pages/Layout/LecturerLayout';
-import LecturerSidebar from '../../components/common/LectureSideBar';
 import { AlertTriangle, Book, ChevronDown, Filter, Flag, Mail, Search } from 'lucide-react';
 
 const AtRiskStudent = () => {
@@ -403,16 +400,6 @@ const AtRiskStudent = () => {
   );
 };
 
-// Wrap with layout
-const AtRiskStudentsPage = () => {
-  return (
-    <BaseLayout
-      userRole="lecturer"
-      Sidebar={LecturerSidebar}
-    >
-      <AtRiskStudents />
-    </BaseLayout>
-  );
-};
+
 
 export default AtRiskStudent;

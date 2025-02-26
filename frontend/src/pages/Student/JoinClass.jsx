@@ -1,7 +1,4 @@
-// src/pages/student/JoinClass.jsx
 import React, { useState } from 'react';
-import BaseLayout from '../../pages/Layout/StudentLayout';
-import StudentSidebar from '../../components/common/StudentSideBar';
 
 const JoinClass = () => {
   const [inviteCode, setInviteCode] = useState('');
@@ -143,16 +140,6 @@ const JoinClass = () => {
   );
 };
 
-// Wrap with layout
-const JoinClassPage = () => {
-  return (
-    <BaseLayout
-      userRole="student"
-      Sidebar={StudentSidebar}
-    >
-      <JoinClass />
-    </BaseLayout>
-  );
-};
+
 
 export default JoinClass;

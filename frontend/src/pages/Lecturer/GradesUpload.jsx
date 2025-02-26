@@ -1,7 +1,4 @@
-// src/pages/lecturer/GradesUpload.jsx
 import React, { useState } from 'react';
-import BaseLayout from '../../pages/Layout/LecturerLayout';
-import LecturerSidebar from '../../components/common/LectureSideBar';
 import { 
   Upload, 
   FileSpreadsheet, 
@@ -30,11 +27,11 @@ const GradesUpload = () => {
   ];
 
   const assignments = [
-    { id: 'midterm', name: 'Midterm Exam' },
+    { id: 'mid-semester', name: 'Mid Semester' },
     { id: 'final', name: 'Final Exam' },
-    { id: 'project1', name: 'Project 1' },
-    { id: 'project2', name: 'Project 2' },
-    { id: 'quiz1', name: 'Quiz 1' }
+    { id: 'project', name: 'Project' },
+    { id: 'quiz', name: 'Quiz' },
+    { id: 'assignment', name: 'Assignment' }
   ];
 
   const handleFileChange = (e) => {
@@ -147,7 +144,7 @@ const GradesUpload = () => {
               {/* Assignment Selection */}
               <div>
                 <label htmlFor="assignment-select" className="block text-sm font-medium text-[#0e161b] mb-1">
-                  Select Assignment <span className="text-[#dc3545]">*</span>
+                  Select Assessment Type <span className="text-[#dc3545]">*</span>
                 </label>
                 <div className="relative">
                   <select
@@ -207,7 +204,7 @@ const GradesUpload = () => {
               </div>
 
               {/* Notification Option */}
-              <div className="flex items-start">
+              {/* <div className="flex items-start">
                 <div className="flex items-center h-5">
                   <input
                     id="send-notification"
@@ -226,7 +223,7 @@ const GradesUpload = () => {
                     Send notifications to students about their grades
                   </p>
                 </div>
-              </div>
+              </div> */}
               
               {/* Submit Button */}
               <div className="flex justify-end">
@@ -376,16 +373,6 @@ const GradesUpload = () => {
   );
 };
 
-// Wrap with layout
-const GradesUploadPage = () => {
-  return (
-    <BaseLayout
-      userRole="lecturer"
-      Sidebar={LecturerSidebar}
-    >
-      <GradesUpload />
-    </BaseLayout>
-  );
-};
+
 
 export default GradesUpload;

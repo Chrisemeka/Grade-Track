@@ -1,7 +1,4 @@
-// src/pages/parent/Dashboard.jsx
 import React from 'react';
-import BaseLayout from '../Layout/ParentLayout';
-import ParentSidebar from '../../components/common/ParentSideBar';
 
 const ParentDashboard = () => {
   return (
@@ -21,8 +18,8 @@ const ParentDashboard = () => {
       {/* Children Overview */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {[
-          { name: 'Emily Johnson', grade: '100 Level', performance: 'Excellent', cgpa: '3.8' },
-          { name: 'Michael Johnson', grade: '300 Level', performance: 'Good', cgpa: '3.5' },
+          { name: 'Emily Johnson', level: '100 Level', performance: 'Excellent', cgpa: '3.8' },
+          { name: 'Michael Johnson', level: '300 Level', performance: 'Good', cgpa: '3.5' },
         ].map((child, index) => (
           <div key={index} className="flex flex-col gap-3 bg-white rounded-lg p-4 border border-[#d1dde6]">
             <div className="flex items-center gap-3">
@@ -36,7 +33,7 @@ const ParentDashboard = () => {
                 <p className="text-[#507a95] text-sm">{child.grade}</p>
               </div>
             </div>
-            <div className="flex justify-between items-center pt-2">
+            {/* <div className="flex justify-between items-center pt-2">
               <div>
                 <p className="text-[#507a95] text-sm">Current GPA</p>
                 <p className="text-[#0e161b] text-xl font-bold">{child.cgpa}</p>
@@ -45,7 +42,7 @@ const ParentDashboard = () => {
                 <p className="text-[#507a95] text-sm">Performance</p>
                 <p className="text-[#1d8cd7] text-sm font-medium">{child.performance}</p>
               </div>
-            </div>
+            </div> */}
           </div>
         ))}
       </div>
@@ -119,16 +116,6 @@ const ParentDashboard = () => {
   );
 };
 
-// Wrap the dashboard with the layout
-// const ParentDashboardPage = () => {
-//   return (
-//     <BaseLayout
-//       userRole="parent"
-//       Sidebar={ParentSidebar}
-//     >
-//       <ParentDashboard />
-//     </BaseLayout>
-//   );
-// };
+
 
 export default ParentDashboard;

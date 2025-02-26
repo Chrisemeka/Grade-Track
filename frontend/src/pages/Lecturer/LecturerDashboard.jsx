@@ -1,7 +1,4 @@
-// src/pages/lecturer/Dashboard.jsx
 import React from 'react';
-import BaseLayout from '../../pages/Layout/LecturerLayout';
-import LecturerSidebar from '../../components/common/LectureSideBar';
 
 const LecturerDashboard = () => {
   return (
@@ -24,7 +21,7 @@ const LecturerDashboard = () => {
           // { title: 'Total Students', value: '156', subtitle: 'Across all courses' },
           { title: 'Active Courses', value: '4', subtitle: 'Current semester' },
           { title: 'Average Performance', value: '85%', subtitle: 'Class average' },
-          { title: 'Pending Assignments', value: '12', subtitle: 'Uploads Grade' },
+          // { title: 'Pending Assignments', value: '12', subtitle: 'Uploads Grade' },
         ].map((stat) => (
           <div key={stat.title} className="flex flex-col gap-2 rounded-lg border border-[#d1dde6] p-4 bg-white">
             <p className="text-[#0e161b] tracking-light text-2xl font-bold leading-tight">
@@ -97,16 +94,6 @@ const LecturerDashboard = () => {
   );
 };
 
-// Wrap the dashboard with the layout
-// const LecturerDashboardPage = () => {
-//   return (
-//     <BaseLayout
-//       userRole="lecturer"
-//       Sidebar={LecturerSidebar}
-//     >
-//       <LecturerDashboard />
-//     </BaseLayout>
-//   );
-// };
+
 
 export default LecturerDashboard;

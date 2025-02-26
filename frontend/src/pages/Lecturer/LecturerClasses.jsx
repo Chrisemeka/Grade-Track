@@ -1,8 +1,5 @@
-// src/pages/lecturer/Classes.jsx
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import BaseLayout from '../../pages/Layout/LecturerLayout';
-import LecturerSidebar from '../../components/common/LectureSideBar';
 import { BookOpen, Users, Calendar, Copy, Bell, AlertTriangle, Trash2, Check, MoreVertical } from 'lucide-react';
 
 const LecturerClasses = () => {
@@ -17,7 +14,7 @@ const LecturerClasses = () => {
       endDate: '2024-05-30',
       students: 32,
       atRiskCount: 5,
-      pendingGrades: 12,
+      // pendingGrades: 12,
       nextClass: 'Tomorrow, 10:00 AM'
     },
     {
@@ -29,7 +26,7 @@ const LecturerClasses = () => {
       endDate: '2024-05-30',
       students: 28,
       atRiskCount: 3,
-      pendingGrades: 8,
+      // pendingGrades: 8,
       nextClass: 'Today, 2:00 PM'
     },
     {
@@ -41,7 +38,7 @@ const LecturerClasses = () => {
       endDate: '2024-05-30',
       students: 35,
       atRiskCount: 7,
-      pendingGrades: 15,
+      // pendingGrades: 15,
       nextClass: 'Friday, 11:00 AM'
     }
   ]);
@@ -180,36 +177,36 @@ const LecturerClasses = () => {
                     <span className="text-[#0e161b] text-sm">{classItem.atRiskCount} at-risk students</span>
                   </div>
                 </div>
-                <div>
+                {/* <div>
                   <div className="flex items-center">
                     <Bell className="h-4 w-4 text-[#1d8cd7] mr-2" />
                     <span className="text-[#0e161b] text-sm">{classItem.pendingGrades} pending grades</span>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
 
             {/* Next Class */}
-            <div className="px-5 py-3 border-b border-[#d1dde6]">
+            {/* <div className="px-5 py-3 border-b border-[#d1dde6]">
               <p className="text-[#507a95] text-xs">Next Class</p>
               <p className="text-[#0e161b] text-sm mt-1">{classItem.nextClass}</p>
-            </div>
+            </div> */}
 
             {/* Actions */}
-            <div className="p-3 flex flex-wrap gap-2">
-              {/* <Link 
+            {/* <div className="p-3 flex flex-wrap gap-2">
+              <Link 
                 to={`/lecturer/classes/${classItem.id}`}
                 className="flex-1 flex justify-center items-center py-2 px-4 border border-transparent rounded-lg text-sm font-medium text-white bg-[#1d8cd7] hover:bg-[#1d8cd7]/90"
               >
                 View Details
-              </Link> */}
+              </Link>
               <Link 
                 to={`/lecturer/classes/${classItem.id}/students`}
-                className="flex-1 flex justify-center items-center py-2 px-4 border border-transparent rounded-lg text-sm font-medium text-[#e8eef3] bg-[#1d8cd7] hover:bg-[#1d8cd7]/90"
+                className="flex-1 flex justify-center items-center py-2 px-4 border border-transparent rounded-lg text-sm font-medium text-[#1d8cd7] bg-[#e8eef3] hover:bg-[#e8eef3]/80"
               >
                 Students
               </Link>
-            </div>
+            </div> */}
           </div>
         ))}
       </div>
@@ -255,16 +252,6 @@ const LecturerClasses = () => {
   );
 };
 
-// Wrap with layout
-const ClassesPage = () => {
-  return (
-    <BaseLayout
-      userRole="lecturer"
-      Sidebar={LecturerSidebar}
-    >
-      <Classes />
-    </BaseLayout>
-  );
-};
+
 
 export default LecturerClasses;

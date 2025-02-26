@@ -1,7 +1,4 @@
-// src/pages/admin/Dashboard.jsx
 import React from 'react';
-import BaseLayout from '../../pages/Layout/AdminLayout';
-// import AdminSidebar from '../../components/common/AdminSideBar';
 import { 
   Users, 
   BookOpen, 
@@ -340,16 +337,6 @@ const AdminDashboard = () => {
   );
 };
 
-// Wrap with layout
-// const AdminDashboardPage = () => {
-//   return (
-//     <BaseLayout
-//       userRole="admin"
-//       Sidebar={AdminSidebar}
-//     >
-//       <Dashboard />
-//     </BaseLayout>
-//   );
-// };
+
 
 export default AdminDashboard;

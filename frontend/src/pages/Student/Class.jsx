@@ -1,8 +1,6 @@
 // src/pages/student/Classes.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
-import BaseLayout from '../../pages/Layout/StudentLayout';
-import StudentSidebar from '../../components/common/StudentSideBar';
 import { BookOpen, Users, Calendar, ExternalLink, Bell } from 'lucide-react';
 
 const Class = () => {
@@ -123,18 +121,18 @@ const Class = () => {
 
             {/* Actions */}
             <div className="mt-auto p-3 flex gap-2">
-              {/* <Link 
+              <Link 
                 to={`/student/classes/${classItem.id}`}
                 className="flex-1 flex justify-center items-center py-2 px-4 border border-transparent rounded-lg text-sm font-medium text-[#1d8cd7] bg-[#e8eef3] hover:bg-[#e8eef3]/80"
               >
                 View Details
-              </Link> */}
-              <Link 
+              </Link>
+              {/* <Link 
                 to={`/student/classes/${classItem.id}/assignments`}
                 className="flex-1 flex justify-center items-center py-2 px-4 border border-transparent rounded-lg text-sm font-medium text-white bg-[#1d8cd7] hover:bg-[#1d8cd7]/90"
               >
                 Assignments
-              </Link>
+              </Link> */}
             </div>
           </div>
         ))}
@@ -182,15 +180,6 @@ const Class = () => {
 };
 
 // Wrap with layout
-const ClassesPage = () => {
-  return (
-    <BaseLayout
-      userRole="student"
-      Sidebar={StudentSidebar}
-    >
-      <Classes />
-    </BaseLayout>
-  );
-};
+
 
 export default Class;

@@ -1,7 +1,4 @@
-// src/pages/lecturer/CreateClass.jsx
 import React, { useState } from 'react';
-import BaseLayout from '../../pages/Layout/LecturerLayout';
-import LecturerSidebar from '../../components/common/LectureSideBar';
 import { Copy, Check } from 'lucide-react';
 
 const CreateClass = () => {
@@ -296,16 +293,5 @@ const CreateClass = () => {
   );
 };
 
-// Wrap with layout
-const CreateClassPage = () => {
-  return (
-    <BaseLayout
-      userRole="lecturer"
-      Sidebar={LecturerSidebar}
-    >
-      <CreateClass />
-    </BaseLayout>
-  );
-};
 
 export default CreateClass;

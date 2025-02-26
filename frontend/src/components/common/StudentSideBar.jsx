@@ -72,7 +72,7 @@ const StudentSidebar = () => {
               John Doe
             </h1>
             <p className="text-[#507a95] text-sm font-normal leading-normal">
-              Student ID: STU123
+              Matric No: STU123
             </p>
           </div>
         </div>
