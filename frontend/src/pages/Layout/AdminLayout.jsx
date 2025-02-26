@@ -1,11 +1,11 @@
-// src/layouts/BaseLayout.jsx
+// src/layouts/AdminLayout.jsx
 import React, { useState, useEffect } from 'react';
 import { Outlet, useNavigate } from 'react-router-dom';
 import Header from '../../components/common/Header';
+import AdminSidebar from '../../components/common/AdminSideBar';
 import Footer from '../../components/common/Footer';
-import StudentSidebar from '../../components/common/StudentSideBar';
 
-const StudentLayout = ({ userRole }) => {
+const AdminLayout = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const navigate = useNavigate();
 
@@ -14,6 +14,17 @@ const StudentLayout = ({ userRole }) => {
   //   const token = localStorage.getItem('token');
   //   if (!token) {
   //     navigate('/login');
+  //   } else {
+  //     try {
+  //       const user = JSON.parse(atob(token.split('.')[1]));
+  //       if (user.role !== 'admin') {
+  //         // Redirect non-admins
+  //         navigate('/unauthorized');
+  //       }
+  //     } catch (error) {
+  //       console.error('Error checking admin role:', error);
+  //       navigate('/login');
+  //     }
   //   }
   // }, [navigate]);
 
@@ -29,7 +40,11 @@ const StudentLayout = ({ userRole }) => {
     <div className="min-h-screen bg-[#f8fafb] flex flex-col">
       {/* Header - Sticky at the top */}
       <div className="sticky top-0 z-40 bg-white shadow">
-        <Header toggleSidebar={toggleSidebar} userRole={userRole} />
+        <Header 
+          toggleSidebar={toggleSidebar} 
+          userRole="admin"
+          userName="Admin User"
+        />
       </div>
 
       {/* Main Layout */}
@@ -42,7 +57,7 @@ const StudentLayout = ({ userRole }) => {
             ${sidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
           `}
         >
-          <StudentSidebar />
+          <AdminSidebar />
         </div>
 
         {/* Mobile Overlay */}
@@ -72,4 +87,4 @@ const StudentLayout = ({ userRole }) => {
   );
 };
 
-export default StudentLayout;
+export default AdminLayout;

@@ -8,6 +8,15 @@ import LecturerLayout from './pages/Layout/LecturerLayout';
 import StudentLayout from './pages/Layout/StudentLayout';
 import ParentLayout from './pages/Layout/ParentLayout';
 import ParentDashboard from './pages/Parent/ParentDashboard';
+import JoinClass from './pages/Student/JoinClass';
+import CreateClass from './pages/Lecturer/CreateClass';
+import Class from './pages/Student/Class';
+import LecturerClasses from './pages/Lecturer/LecturerClasses';
+import AtRiskStudent from './pages/Lecturer/AtRiskStudent';
+import GradesUpload from './pages/Lecturer/GradesUpload';
+import AdminDashboardPage from './pages/Admin/AdminDashboard';
+import AdminDashboard from './pages/Admin/AdminDashboard';
+import AdminLayout from './pages/Layout/AdminLayout';
 
 function App() {
   return (
@@ -21,16 +30,27 @@ function App() {
         {/* Lecturer Routes */}
         <Route path="/lecturer" element={<LecturerLayout />}>
           <Route path="dashboard" element={<LecturerDashboard />} />
+          <Route path="create-class" element={<CreateClass />} />
+          <Route path="classes" element={<LecturerClasses />} />
+          <Route path="at-risk" element={<AtRiskStudent />} />
+          <Route path="grades-upload" element={<GradesUpload />} />
         </Route>
         
         {/* Student Routes */}
         <Route path="/student" element={<StudentLayout />}>
           <Route path="dashboard" element={<StudentDashboard />} />
+          <Route path="join-class" element={<JoinClass />} />
+          <Route path="classes" element={<Class />} />
         </Route>
 
         {/* Parent Routes */}
         <Route path="/parent" element={<ParentLayout />}>
           <Route path="dashboard" element={<ParentDashboard />} />
+        </Route>
+
+        {/* Admin Routes */}
+        <Route path="/admin" element={<AdminLayout />}>
+          <Route path="dashboard" element={<AdminDashboard />} />
         </Route>
         
       </Routes>

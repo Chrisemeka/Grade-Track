@@ -21,8 +21,8 @@ const ParentDashboard = () => {
       {/* Children Overview */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {[
-          { name: 'Emily Johnson', grade: '10th Grade', performance: 'Excellent', gpa: '3.8' },
-          { name: 'Michael Johnson', grade: '8th Grade', performance: 'Good', gpa: '3.5' },
+          { name: 'Emily Johnson', grade: '100 Level', performance: 'Excellent', cgpa: '3.8' },
+          { name: 'Michael Johnson', grade: '300 Level', performance: 'Good', cgpa: '3.5' },
         ].map((child, index) => (
           <div key={index} className="flex flex-col gap-3 bg-white rounded-lg p-4 border border-[#d1dde6]">
             <div className="flex items-center gap-3">
@@ -39,7 +39,7 @@ const ParentDashboard = () => {
             <div className="flex justify-between items-center pt-2">
               <div>
                 <p className="text-[#507a95] text-sm">Current GPA</p>
-                <p className="text-[#0e161b] text-xl font-bold">{child.gpa}</p>
+                <p className="text-[#0e161b] text-xl font-bold">{child.cgpa}</p>
               </div>
               <div>
                 <p className="text-[#507a95] text-sm">Performance</p>
@@ -58,9 +58,9 @@ const ParentDashboard = () => {
         
         <div className="flex flex-col gap-2">
           {[
-            { child: 'Emily', activity: 'Submitted Math Assignment', grade: 'A', time: '2 hours ago' },
-            { child: 'Michael', activity: 'Completed Science Quiz', grade: 'B+', time: '1 day ago' },
-            { child: 'Emily', activity: 'Attended History Class', status: 'Present', time: '2 days ago' },
+            { child: 'Emily', activity: 'Grade for Math 101 uploaded', grade: 'A', time: '2 hours ago' },
+            { child: 'Michael', activity: 'Grade for Seng 303 uploaded', grade: 'B+', time: '1 day ago' },
+            { child: 'Emily', activity: 'Grade for Eng 103 uploaded', grade: 'B+', time: '2 days ago' },
           ].map((activity, index) => (
             <div key={index} className="flex items-center justify-between bg-white rounded-lg p-4 border border-[#d1dde6]">
               <div className="flex items-center gap-4">
@@ -92,7 +92,7 @@ const ParentDashboard = () => {
       </div>
 
       {/* Upcoming Events */}
-      <div className="flex flex-col gap-4">
+      {/* <div className="flex flex-col gap-4">
         <h3 className="text-[#0e161b] text-[22px] font-bold leading-tight tracking-[-0.015em]">
           Upcoming Events
         </h3>
@@ -114,49 +114,21 @@ const ParentDashboard = () => {
             </div>
           ))}
         </div>
-      </div>
-
-      {/* Messages from Teachers */}
-      <div className="flex flex-col gap-4">
-        <h3 className="text-[#0e161b] text-[22px] font-bold leading-tight tracking-[-0.015em]">
-          Messages from Teachers
-        </h3>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {[
-            { teacher: 'Mrs. Smith', subject: 'Mathematics', message: 'Emily has shown great improvement in calculus', time: '1 day ago' },
-            { teacher: 'Mr. Brown', subject: 'Science', message: 'Michael participated well in today\'s lab activity', time: '2 days ago' },
-          ].map((message, index) => (
-            <div key={index} className="flex items-center gap-4 bg-white rounded-lg p-4 border border-[#d1dde6]">
-              <div className="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12"
-                style={{
-                  backgroundImage: `url("/api/placeholder/48/48")`
-                }}
-              />
-              <div className="flex flex-col flex-1">
-                <p className="text-[#0e161b] text-base font-medium">{message.teacher}</p>
-                <p className="text-[#507a95] text-sm">{message.subject}</p>
-                <p className="text-[#0e161b] text-sm mt-1">{message.message}</p>
-                <p className="text-[#507a95] text-xs mt-1">{message.time}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+      </div> */}
     </div>
   );
 };
 
 // Wrap the dashboard with the layout
-const ParentDashboardPage = () => {
-  return (
-    <BaseLayout
-      userRole="parent"
-      Sidebar={ParentSidebar}
-    >
-      <ParentDashboard />
-    </BaseLayout>
-  );
-};
+// const ParentDashboardPage = () => {
+//   return (
+//     <BaseLayout
+//       userRole="parent"
+//       Sidebar={ParentSidebar}
+//     >
+//       <ParentDashboard />
+//     </BaseLayout>
+//   );
+// };
 
 export default ParentDashboard;

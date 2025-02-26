@@ -7,7 +7,8 @@ import {
   FileText, 
   GraduationCap, 
   MessageSquare, 
-  Calendar,
+  Bell,
+  UserPlus,
   Settings, 
   LogOut 
 } from 'lucide-react';
@@ -20,35 +21,35 @@ const StudentSidebar = () => {
       icon: Home
     },
     {
-      title: 'My Courses',
-      path: '/student/courses',
+      title: 'My Classes',
+      path: '/student/classes',
       icon: BookOpen
     },
     {
-      title: 'Assignments',
-      path: '/student/assignments',
-      icon: FileText
+      title: 'Join Class',
+      path: '/student/join-class',
+      icon: UserPlus
     },
+    // {
+    //   title: 'Assignments',
+    //   path: '/student/assignments',
+    //   icon: FileText
+    // },
     {
-      title: 'Grades',
+      title: 'Grades & Feedback',
       path: '/student/grades',
       icon: GraduationCap
     },
-    {
-      title: 'Feedback',
-      path: '/student/feedback',
-      icon: MessageSquare
-    },
-    {
-      title: 'Schedule',
-      path: '/student/schedule',
-      icon: Calendar
-    },
-    {
-      title: 'Settings',
-      path: '/student/settings',
-      icon: Settings
-    }
+    // {
+    //   title: 'Notifications',
+    //   path: '/student/notifications',
+    //   icon: Bell
+    // },
+    // {
+    //   title: 'Settings',
+    //   path: '/student/settings',
+    //   icon: Settings
+    // }
   ];
 
   const handleLogout = () => {
@@ -66,7 +67,7 @@ const StudentSidebar = () => {
               backgroundImage: `url("/api/placeholder/40/40")`
             }}
           />
-          <div className="flex flex-col">
+          <div className="flex mt-20 flex-col">
             <h1 className="text-[#0e161b] text-base font-medium leading-normal">
               John Doe
             </h1>
@@ -94,22 +95,18 @@ const StudentSidebar = () => {
             </NavLink>
           ))}
         </nav>
-      </div>
 
-      {/* Action Buttons */}
-      <div className="flex flex-col gap-2">
-        <button className="flex w-full justify-center items-center gap-2 rounded-xl h-10 px-4 bg-[#1d8cd7] text-[#f8fafb] text-sm font-bold">
-          <FileText className="size-4" />
-          <span>Submit Assignment</span>
-        </button>
-        
-        <button 
-          onClick={handleLogout}
-          className="flex w-full justify-center items-center gap-2 rounded-xl h-10 px-4 bg-[#dc3545] text-[#f8fafb] text-sm font-bold"
-        >
-          <LogOut className="size-4" />
-          <span>Logout</span>
-        </button>
+        {/* Action Buttons */}
+
+        <div>
+          <button 
+            onClick={handleLogout}
+            className="flex w-full justify-center items-center rounded-xl h-10 px-4 bg-[#dc3545] text-[#f8fafb] text-sm font-bold"
+          >
+            <LogOut className="size-4" />
+            <span>Logout</span>
+          </button>
+        </div>
       </div>
     </div>
   );

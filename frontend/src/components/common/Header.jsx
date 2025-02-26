@@ -1,6 +1,7 @@
 // components/common/Header.jsx
 import React, { useState } from 'react';
 import { Bell, User, LogOut, Menu as MenuIcon } from 'lucide-react';
+import logo from '../../assets/images/Gradetrack-02.svg';
 
 const Header = ({ toggleSidebar, userRole, userName }) => {
   const [notifications] = useState([
@@ -28,13 +29,13 @@ const Header = ({ toggleSidebar, userRole, userName }) => {
             
             <div className="flex-shrink-0 flex items-center ml-4">
               <img
-                className="h-8 w-auto"
-                src="/api/placeholder/32/32"
+                className="h-36 w-auto"
+                src={logo}
                 alt="Logo"
               />
-              <span className="ml-2 text-xl font-semibold text-gray-900">
-                Learning Portal
-              </span>
+              {/* <span className="ml-2 text-xl font-semibold text-gray-900">
+                Grade Tracker
+              </span> */}
             </div>
           </div>
 

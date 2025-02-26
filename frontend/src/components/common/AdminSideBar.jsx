@@ -1,52 +1,77 @@
-// src/components/sidebars/ParentSidebar.jsx
+// src/components/sidebars/AdminSidebar.jsx
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { 
   Home, 
   Users, 
-  BookOpen,
-  GraduationCap, 
-  MessageSquare, 
-  Bell,
+  Shield,
   Settings, 
+  Server,
+  BarChart,
+  Database,
+  FileText,
+  BookOpen,
+  Bell,
+  Lock,
+  UserPlus,
   LogOut 
 } from 'lucide-react';
 
-const ParentSidebar = () => {
+const AdminSidebar = () => {
   const navigationItems = [
     {
       title: 'Dashboard',
-      path: '/parent/dashboard',
+      path: '/admin/dashboard',
       icon: Home
     },
     {
-      title: 'My Children',
-      path: '/parent/children',
+      title: 'User Management',
+      path: '/admin/users',
       icon: Users
     },
-    // {
-    //   title: 'Class List',
-    //   path: '/parent/classes',
-    //   icon: BookOpen
-    // },
     {
-      title: 'Performance',
-      path: '/parent/performance',
-      icon: GraduationCap
+      title: 'Role Management',
+      path: '/admin/roles',
+      icon: Shield
     },
-    // {
-    //   title: 'Messages',
-    //   path: '/parent/messages',
-    //   icon: MessageSquare
-    // },
+    {
+      title: 'Classes Overview',
+      path: '/admin/classes',
+      icon: BookOpen
+    },
+    {
+      title: 'System Logs',
+      path: '/admin/logs',
+      icon: FileText
+    },
+    {
+      title: 'System Analytics',
+      path: '/admin/analytics',
+      icon: BarChart
+    },
     {
       title: 'Notifications',
-      path: '/parent/notifications',
+      path: '/admin/notifications',
       icon: Bell
     },
     // {
+    //   title: 'Database Management',
+    //   path: '/admin/database',
+    //   icon: Database
+    // },
+    // {
+    //   title: 'System Configuration',
+    //   path: '/admin/system',
+    //   icon: Server
+    // },
+    // {
+    //   title: 'Security Settings',
+    //   path: '/admin/security',
+    //   icon: Lock
+    // },
+    // {
     //   title: 'Settings',
-    //   path: '/parent/settings',
+    //   path: '/admin/settings',
     //   icon: Settings
     // }
   ];
@@ -68,16 +93,16 @@ const ParentSidebar = () => {
           />
           <div className="flex mt-20 flex-col">
             <h1 className="text-[#0e161b] text-base font-medium leading-normal">
-              Mr. Johnson
+              Admin User
             </h1>
             <p className="text-[#507a95] text-sm font-normal leading-normal">
-              Parent Account
+              System Administrator
             </p>
           </div>
         </div>
 
         {/* Navigation */}
-        <nav className="flex flex-col gap-2">
+        <nav className="flex flex-col gap-2 overflow-y-auto">
           {navigationItems.map((item) => (
             <NavLink
               key={item.title}
@@ -111,4 +136,4 @@ const ParentSidebar = () => {
   );
 };
 
-export default ParentSidebar;
+export default AdminSidebar;

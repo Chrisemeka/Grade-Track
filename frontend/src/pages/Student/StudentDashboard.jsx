@@ -19,11 +19,9 @@ const StudentDashboard = () => {
       </div>
 
       {/* Performance Overview */}
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-4">
         {[
           { semester: 'Overall GPA', grade: '3.8' },
-          { semester: 'Fall 2023', grade: '3.9' },
-          { semester: 'Spring 2024', grade: '3.7' },
         ].map((item) => (
           <div key={item.semester} className="flex flex-col gap-2 rounded-lg border border-[#d1dde6] p-4 bg-white">
             <p className="text-[#0e161b] tracking-light text-2xl font-bold leading-tight">
@@ -61,9 +59,6 @@ const StudentDashboard = () => {
                   <p className="text-[#507a95] text-sm">Due in {item.dueDate} • {item.course}</p>
                 </div>
               </div>
-              <button className="text-[#1d8cd7] hover:text-[#1d8cd7]/80 text-sm font-medium">
-                Submit
-              </button>
             </div>
           ))}
         </div>
@@ -72,7 +67,7 @@ const StudentDashboard = () => {
       {/* Recent Feedback */}
       <div className="flex flex-col gap-4">
         <h3 className="text-[#0e161b] text-[22px] font-bold leading-tight tracking-[-0.015em]">
-          Recent Feedback
+          Recent Assignment Feedback
         </h3>
         
         <div className="flex flex-col gap-2">
@@ -102,7 +97,7 @@ const StudentDashboard = () => {
       </div>
 
       {/* Course Progress */}
-      <div className="flex flex-col gap-4">
+      {/* <div className="flex flex-col gap-4">
         <h3 className="text-[#0e161b] text-[22px] font-bold leading-tight tracking-[-0.015em]">
           Course Progress
         </h3>
@@ -127,21 +122,21 @@ const StudentDashboard = () => {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
 
 // Wrap the dashboard with the layout
-const StudentDashboardPage = () => {
-  return (
-    <BaseLayout
-      userRole="student"
-      Sidebar={StudentSidebar}
-    >
-      <StudentDashboard />
-    </BaseLayout>
-  );
-};
+// const StudentDashboardPage = () => {
+//   return (
+//     <BaseLayout
+//       userRole="student"
+//       Sidebar={StudentSidebar}
+//     >
+//       <StudentDashboard />
+//     </BaseLayout>
+//   );
+// };
 
 export default StudentDashboard;

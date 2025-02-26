@@ -23,7 +23,7 @@ const Footer = () => {
           </div>
           <div className="mt-8 md:mt-0 md:order-1">
             <p className="text-center text-sm text-gray-400">
-              © {new Date().getFullYear()} Learning Management System. All rights reserved.
+              © {new Date().getFullYear()} Grade Track. All rights reserved.
             </p>
           </div>
         </div>

@@ -6,12 +6,13 @@ import {
   Users, 
   BookOpen, 
   FileText, 
-  BarChart, 
-  MessageSquare,
-  Calendar,
+  Upload,
+  Flag,
+  Bell,
+  AlertTriangle,
+  PlusCircle, 
   Settings, 
-  LogOut,
-  Plus 
+  LogOut 
 } from 'lucide-react';
 
 const LecturerSidebar = () => {
@@ -22,40 +23,45 @@ const LecturerSidebar = () => {
       icon: Home
     },
     {
-      title: 'Students',
-      path: '/lecturer/students',
-      icon: Users
-    },
-    {
-      title: 'Courses',
-      path: '/lecturer/courses',
+      title: 'My Classes',
+      path: '/lecturer/classes',
       icon: BookOpen
     },
     {
-      title: 'Assignments',
-      path: '/lecturer/assignments',
-      icon: FileText
+      title: 'Create Class',
+      path: '/lecturer/create-class',
+      icon: PlusCircle
+    },
+    // {
+    //   title: 'Students',
+    //   path: '/lecturer/students',
+    //   icon: Users
+    // },
+    {
+      title: 'At-Risk Students',
+      path: '/lecturer/at-risk',
+      icon: AlertTriangle
+    },
+    // {
+    //   title: 'Flagged Students',
+    //   path: '/lecturer/flagged',
+    //   icon: Flag
+    // },
+    {
+      title: 'Grade Upload',
+      path: '/lecturer/grades-upload',
+      icon: Upload
     },
     {
-      title: 'Performance',
-      path: '/lecturer/performance',
-      icon: BarChart
+      title: 'Notifications',
+      path: '/lecturer/notifications',
+      icon: Bell
     },
-    {
-      title: 'Feedback',
-      path: '/lecturer/feedback',
-      icon: MessageSquare
-    },
-    {
-      title: 'Schedule',
-      path: '/lecturer/schedule',
-      icon: Calendar
-    },
-    {
-      title: 'Settings',
-      path: '/lecturer/settings',
-      icon: Settings
-    }
+    // {
+    //   title: 'Settings',
+    //   path: '/lecturer/settings',
+    //   icon: Settings
+    // }
   ];
 
   const handleLogout = () => {
@@ -73,7 +79,7 @@ const LecturerSidebar = () => {
               backgroundImage: `url("/api/placeholder/40/40")`
             }}
           />
-          <div className="flex flex-col">
+          <div className="flex mt-20 flex-col">
             <h1 className="text-[#0e161b] text-base font-medium leading-normal">
               Dr. Smith
             </h1>
@@ -84,7 +90,7 @@ const LecturerSidebar = () => {
         </div>
 
         {/* Navigation */}
-        <nav className="flex flex-col gap-2">
+        <nav className="flex flex-col gap-2 overflow-y-auto">
           {navigationItems.map((item) => (
             <NavLink
               key={item.title}
@@ -101,22 +107,18 @@ const LecturerSidebar = () => {
             </NavLink>
           ))}
         </nav>
-      </div>
 
-      {/* Action Buttons */}
-      <div className="flex flex-col gap-2">
-        <button className="flex w-full justify-center items-center gap-2 rounded-xl h-10 px-4 bg-[#1d8cd7] text-[#f8fafb] text-sm font-bold">
-          <Plus className="size-4" />
-          <span>Create Assignment</span>
-        </button>
+        {/* Action Buttons */}
         
-        <button 
-          onClick={handleLogout}
-          className="flex w-full justify-center items-center gap-2 rounded-xl h-10 px-4 bg-[#dc3545] text-[#f8fafb] text-sm font-bold"
-        >
-          <LogOut className="size-4" />
-          <span>Logout</span>
-        </button>
+        <div>
+          <button 
+            onClick={handleLogout}
+            className="flex w-full justify-center items-center rounded-xl h-10 px-4 bg-[#dc3545] text-[#f8fafb] text-sm font-bold"
+          >
+            <LogOut className="size-4" />
+            <span>Logout</span>
+          </button>
+        </div>
       </div>
     </div>
   );
