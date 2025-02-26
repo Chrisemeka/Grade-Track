@@ -36,7 +36,7 @@ const LecturerDashboard = () => {
       </div>
 
       {/* Recent Assignments */}
-      <div className="flex flex-col gap-4">
+      {/* <div className="flex flex-col gap-4">
         <div className="flex justify-between items-center">
           <h3 className="text-[#0e161b] text-[22px] font-bold leading-tight tracking-[-0.015em]">
             Recent Assignments
@@ -66,7 +66,7 @@ const LecturerDashboard = () => {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
 
 
       {/* Course Performance */}
