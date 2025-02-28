@@ -5,14 +5,9 @@ import {
   Award
 } from 'lucide-react';
 
-/**
- * Parent Notifications Page
- * 
- * Displays notifications related to their children's academic activities,
- * including grades, assignments, attendance, and messages from teachers.
- */
+
 const Notifications = () => {
-  // State for notifications
+
   const [notifications, setNotifications] = useState([
     {
       id: 1,
@@ -59,12 +54,12 @@ const Notifications = () => {
     );
   };
 
-  // Get icon for notification type
+
   const getNotificationIcon = (type) => {
     return type === 'grade' ? <Award className="h-5 w-5 text-blue-500" /> : <Bell className="h-5 w-5 text-gray-500" />;
   };
 
-  // Format date for display
+
   const formatDate = (dateString) => {
     const date = new Date(dateString);
     return date.toLocaleString();
