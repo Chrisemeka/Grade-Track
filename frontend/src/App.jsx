@@ -17,6 +17,8 @@ import GradesUpload from './pages/Lecturer/GradesUpload';
 import AdminDashboardPage from './pages/Admin/AdminDashboard';
 import AdminDashboard from './pages/Admin/AdminDashboard';
 import AdminLayout from './pages/Layout/AdminLayout';
+import MyChildren from './pages/Parent/MyChildern';
+import Notifications from './pages/Parent/Notification';
 
 function App() {
   return (
@@ -46,6 +48,8 @@ function App() {
         {/* Parent Routes */}
         <Route path="/parent" element={<ParentLayout />}>
           <Route path="dashboard" element={<ParentDashboard />} />
+          <Route path="children" element={<MyChildren />} />
+          <Route path="notifications" element={<Notifications />} />
         </Route>
 
         {/* Admin Routes */}

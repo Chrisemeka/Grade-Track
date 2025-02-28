@@ -52,11 +52,11 @@ const LecturerSidebar = () => {
       path: '/lecturer/grades-upload',
       icon: Upload
     },
-    {
-      title: 'Notifications',
-      path: '/lecturer/notifications',
-      icon: Bell
-    },
+    // {
+    //   title: 'Notifications',
+    //   path: '/lecturer/notifications',
+    //   icon: Bell
+    // },
     // {
     //   title: 'Settings',
     //   path: '/lecturer/settings',

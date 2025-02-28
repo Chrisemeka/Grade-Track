@@ -29,11 +29,11 @@ const ParentSidebar = () => {
     //   path: '/parent/classes',
     //   icon: BookOpen
     // },
-    {
-      title: 'Performance',
-      path: '/parent/performance',
-      icon: GraduationCap
-    },
+    // {
+    //   title: 'Performance',
+    //   path: '/parent/performance',
+    //   icon: GraduationCap
+    // },
     // {
     //   title: 'Messages',
     //   path: '/parent/messages',

@@ -1,9 +1,12 @@
 // src/pages/student/Classes.jsx
-import React from 'react';
+import {React, useState} from 'react';
 import { Link } from 'react-router-dom';
 import { BookOpen, Users, Calendar, ExternalLink, Bell } from 'lucide-react';
+import ClassDetailsModal from '../../components/common/StudentClassDetails';
+
 
 const Class = () => {
+  const [selectedClass, setSelectedClass] = useState(null);
   // Mock data for classes
   const classes = [
     {
@@ -40,6 +43,16 @@ const Class = () => {
       hasNewFeedback: true
     }
   ];
+
+  // Open the details modal
+  const openClassDetails = (classItem) => {
+    setSelectedClass(classItem);
+  };
+
+  // Close the details modal
+  const closeClassDetails = () => {
+    setSelectedClass(null);
+  };
 
   return (
     <div className="flex flex-col gap-6">
@@ -121,12 +134,12 @@ const Class = () => {
 
             {/* Actions */}
             <div className="mt-auto p-3 flex gap-2">
-              <Link 
-                to={`/student/classes/${classItem.id}`}
+            <button 
+                onClick={() => openClassDetails(classItem)}
                 className="flex-1 flex justify-center items-center py-2 px-4 border border-transparent rounded-lg text-sm font-medium text-[#1d8cd7] bg-[#e8eef3] hover:bg-[#e8eef3]/80"
               >
                 View Details
-              </Link>
+              </button>
               {/* <Link 
                 to={`/student/classes/${classItem.id}/assignments`}
                 className="flex-1 flex justify-center items-center py-2 px-4 border border-transparent rounded-lg text-sm font-medium text-white bg-[#1d8cd7] hover:bg-[#1d8cd7]/90"
@@ -175,6 +188,15 @@ const Class = () => {
           </div>
         </div>
       )}
+
+      {/* Class Details Modal */}
+      {selectedClass && (
+        <ClassDetailsModal 
+          classData={selectedClass}
+          onClose={closeClassDetails}
+        />
+      )}
+
     </div>
   );
 };

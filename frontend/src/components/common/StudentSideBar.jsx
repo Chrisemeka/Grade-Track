@@ -35,11 +35,11 @@ const StudentSidebar = () => {
     //   path: '/student/assignments',
     //   icon: FileText
     // },
-    {
-      title: 'Grades & Feedback',
-      path: '/student/grades',
-      icon: GraduationCap
-    },
+    // {
+    //   title: 'Grades & Feedback',
+    //   path: '/student/grades',
+    //   icon: GraduationCap
+    // },
     // {
     //   title: 'Notifications',
     //   path: '/student/notifications',
