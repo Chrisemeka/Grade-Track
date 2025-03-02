@@ -31,6 +31,7 @@ function App() {
 
         {/* Lecturer Routes */}
         <Route path="/lecturer" element={<LecturerLayout />}>
+          <Route path="/lecturer" element={<LecturerDashboard />} />
           <Route path="dashboard" element={<LecturerDashboard />} />
           <Route path="create-class" element={<CreateClass />} />
           <Route path="classes" element={<LecturerClasses />} />
@@ -40,6 +41,7 @@ function App() {
         
         {/* Student Routes */}
         <Route path="/student" element={<StudentLayout />}>
+          <Route path="/student" element={<StudentDashboard />} />
           <Route path="dashboard" element={<StudentDashboard />} />
           <Route path="join-class" element={<JoinClass />} />
           <Route path="classes" element={<Class />} />
@@ -47,6 +49,7 @@ function App() {
 
         {/* Parent Routes */}
         <Route path="/parent" element={<ParentLayout />}>
+          <Route path="/parent" element={<ParentDashboard />} />
           <Route path="dashboard" element={<ParentDashboard />} />
           <Route path="children" element={<MyChildren />} />
           <Route path="notifications" element={<Notifications />} />
@@ -54,6 +57,7 @@ function App() {
 
         {/* Admin Routes */}
         <Route path="/admin" element={<AdminLayout />}>
+          <Route path="/admin" element={<AdminDashboard />} />
           <Route path="dashboard" element={<AdminDashboard />} />
         </Route>
         
