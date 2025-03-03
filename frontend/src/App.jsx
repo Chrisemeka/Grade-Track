@@ -19,6 +19,7 @@ import AdminDashboard from './pages/Admin/AdminDashboard';
 import AdminLayout from './pages/Layout/AdminLayout';
 import MyChildren from './pages/Parent/MyChildern';
 import Notifications from './pages/Parent/Notification';
+import Settings from './components/common/Settings';
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
           <Route path="classes" element={<LecturerClasses />} />
           <Route path="at-risk" element={<AtRiskStudent />} />
           <Route path="grades-upload" element={<GradesUpload />} />
+          <Route path="settings" element={<Settings />} />
         </Route>
         
         {/* Student Routes */}
@@ -45,6 +47,7 @@ function App() {
           <Route path="dashboard" element={<StudentDashboard />} />
           <Route path="join-class" element={<JoinClass />} />
           <Route path="classes" element={<Class />} />
+          <Route path="settings" element={<Settings />} />
         </Route>
 
         {/* Parent Routes */}
@@ -53,12 +56,14 @@ function App() {
           <Route path="dashboard" element={<ParentDashboard />} />
           <Route path="children" element={<MyChildren />} />
           <Route path="notifications" element={<Notifications />} />
+          <Route path="settings" element={<Settings />} />
         </Route>
 
         {/* Admin Routes */}
         <Route path="/admin" element={<AdminLayout />}>
           <Route path="/admin" element={<AdminDashboard />} />
           <Route path="dashboard" element={<AdminDashboard />} />
+          <Route path="settings" element={<Settings />} />
         </Route>
         
       </Routes>

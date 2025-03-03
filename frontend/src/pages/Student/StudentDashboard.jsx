@@ -16,20 +16,20 @@ const StudentDashboard = () => {
       </div>
 
       {/* Performance Overview */}
-      {/* <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-4">
         {[
-          { semester: 'Overall GPA', grade: '3.8' },
+          { classes: 'Enrolled Classes', number: '5' },
         ].map((item) => (
           <div key={item.semester} className="flex flex-col gap-2 rounded-lg border border-[#d1dde6] p-4 bg-white">
             <p className="text-[#0e161b] tracking-light text-2xl font-bold leading-tight">
-              {item.grade}
+              {item.number}
             </p>
             <p className="text-[#507a95] text-sm font-normal leading-normal">
-              {item.semester}
+              {item.classes}
             </p>
           </div>
         ))}
-      </div> */}
+      </div>
 
       {/* Upcoming Assignments */}
       {/* <div className="flex flex-col gap-4">

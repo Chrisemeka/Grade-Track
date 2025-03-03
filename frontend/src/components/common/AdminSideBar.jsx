@@ -69,11 +69,11 @@ const AdminSidebar = () => {
     //   path: '/admin/security',
     //   icon: Lock
     // },
-    // {
-    //   title: 'Settings',
-    //   path: '/admin/settings',
-    //   icon: Settings
-    // }
+    {
+      title: 'Settings',
+      path: '/admin/settings',
+      icon: Settings
+    }
   ];
 
   const handleLogout = () => {
@@ -82,10 +82,11 @@ const AdminSidebar = () => {
   };
 
   return (
-    <div className="flex h-full min-h-[700px] flex-col justify-between bg-white p-4">
-      {/* Profile Section */}
+    <div className="flex mt-24 h-full min-h-[700px] flex-col justify-between bg-white p-4">
+      
       <div className="flex flex-col gap-4">
-        <div className="flex gap-3">
+        {/* Profile Section */}
+        {/* <div className="flex gap-3">
           <div className="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
             style={{
               backgroundImage: `url("/api/placeholder/40/40")`
@@ -99,7 +100,7 @@ const AdminSidebar = () => {
               System Administrator
             </p>
           </div>
-        </div>
+        </div> */}
 
         {/* Navigation */}
         <nav className="flex flex-col gap-2 overflow-y-auto">

@@ -16,9 +16,7 @@ const Class = () => {
       startDate: '2024-01-15',
       endDate: '2024-05-30',
       students: 32,
-      nextAssignment: 'Algorithm Analysis',
-      dueDate: '2024-03-15',
-      hasNewFeedback: true
+      hasNewFeedback: false
     },
     {
       id: 2,
@@ -27,8 +25,6 @@ const Class = () => {
       startDate: '2024-01-15',
       endDate: '2024-05-30',
       students: 28,
-      nextAssignment: 'Binary Tree Implementation',
-      dueDate: '2024-03-18',
       hasNewFeedback: false
     },
     {
@@ -38,8 +34,6 @@ const Class = () => {
       startDate: '2024-01-15',
       endDate: '2024-05-30',
       students: 35,
-      nextAssignment: 'SQL Query Optimization',
-      dueDate: '2024-03-20',
       hasNewFeedback: true
     }
   ];
@@ -121,16 +115,7 @@ const Class = () => {
               </div>
             </div>
 
-            {/* Next Assignment */}
-            <div className="px-5 py-3 border-b border-[#d1dde6]">
-              <p className="text-[#507a95] text-xs mb-1">Next Assignment Due</p>
-              <div className="flex justify-between items-center">
-                <p className="text-[#0e161b] text-sm font-medium">{classItem.nextAssignment}</p>
-                <p className="text-[#507a95] text-xs">
-                  {new Date(classItem.dueDate).toLocaleDateString()}
-                </p>
-              </div>
-            </div>
+ 
 
             {/* Actions */}
             <div className="mt-auto p-3 flex gap-2">

@@ -44,11 +44,11 @@ const ParentSidebar = () => {
       path: '/parent/notifications',
       icon: Bell
     },
-    // {
-    //   title: 'Settings',
-    //   path: '/parent/settings',
-    //   icon: Settings
-    // }
+    {
+      title: 'Settings',
+      path: '/parent/settings',
+      icon: Settings
+    }
   ];
 
   const handleLogout = () => {
@@ -57,10 +57,10 @@ const ParentSidebar = () => {
   };
 
   return (
-    <div className="flex h-full min-h-[700px] flex-col justify-between bg-white p-4">
+    <div className="flex mt-24 h-full min-h-[700px] flex-col justify-between bg-white p-4">
       {/* Profile Section */}
       <div className="flex flex-col gap-4">
-        <div className="flex gap-3">
+        {/* <div className="flex gap-3">
           <div className="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
             style={{
               backgroundImage: `url("/api/placeholder/40/40")`
@@ -74,7 +74,7 @@ const ParentSidebar = () => {
               Parent Account
             </p>
           </div>
-        </div>
+        </div> */}
 
         {/* Navigation */}
         <nav className="flex flex-col gap-2">
