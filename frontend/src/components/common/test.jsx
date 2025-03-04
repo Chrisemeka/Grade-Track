@@ -1,4 +1,3 @@
-// src/components/modals/ClassesModal.jsx
 import React, { useState } from 'react';
 import { 
   X, 
@@ -10,8 +9,8 @@ import {
   Award,
   CheckCircle,
   Search
-} from 'lucide-react'; 
-import ClassDetailsModal from './ClassDetailsModal';
+} from 'lucide-react';
+import ClassDetailsModal from './ClassDetailsModal'; // Import the modal for class details
 
 /**
  * ClassesModal Component
@@ -19,11 +18,11 @@ import ClassDetailsModal from './ClassDetailsModal';
  * Displays a modal with all classes a student is enrolled in.
  * Includes filtering, search, and class details with schedule information.
  */
-const ClassesModal = ({ isOpen, onClose, childData }) => {
+const ClassesModal = ({ isOpen, onClose, childData, onClassClick }) => {
   const [searchQuery, setSearchQuery] = useState('');
   const [filterSubject, setFilterSubject] = useState('all');
-  const [selectedClass, setSelectedClass] = useState(null); //state for selected class
-  
+  const [selectedClass, setSelectedClass] = useState(null); // State for selected class
+
   if (!isOpen || !childData) return null;
   
   // Get unique subject categories for filter
@@ -68,23 +67,16 @@ const ClassesModal = ({ isOpen, onClose, childData }) => {
   };
   
   // Helper function to format schedule time
-  // const formatScheduleTime = (schedule) => {
-  //   return `${schedule.days.join(', ')} • ${schedule.time}`;
-  // };
-  
+  const formatScheduleTime = (schedule) => {
+    return `${schedule.days.join(', ')} • ${schedule.time}`;
+  };
+
   // Handle class click
   const handleClassClick = (cls) => {
-    const classWithGrades = {
-      ...cls,
-      grades: cls.grades || {
-        assignment: "N/A",
-        attendance: "N/A",
-        quiz: "N/A",
-        project: "N/A",
-        midSemester: "N/A"
-      }
-    };
-    setSelectedClass(classWithGrades);
+    setSelectedClass(cls); // Set the selected class
+    if (onClassClick) {
+      onClassClick(cls); // Notify parent component (optional)
+    }
   };
 
   return (

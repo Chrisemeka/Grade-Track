@@ -369,6 +369,7 @@ const MyChildren = () => {
         isOpen={isClassesModalOpen} 
         onClose={() => setIsClassesModalOpen(false)} 
         childData={selectedChild}
+        onClassClick={(cls) => setSelectedClass(cls)}
       />
     </div>
   );
