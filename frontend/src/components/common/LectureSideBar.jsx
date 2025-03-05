@@ -64,10 +64,19 @@ const LecturerSidebar = () => {
     }
   ];
 
+  // const handleLogout = () => {
+  //   localStorage.removeItem('token');
+  //   window.location.href = '/login';
+  // };
+
   const handleLogout = () => {
-    localStorage.removeItem('token');
-    window.location.href = '/login';
+    localStorage.removeItem('token');  // Remove the JWT token
+    localStorage.removeItem('user');   // Remove user data (if stored)
+    localStorage.clear();              // Clears everything in localStorage (optional)
+  
+    window.location.href = '/login';   // Redirect to login page
   };
+  
 
   return (
     <div className="flex mt-24 h-full min-h-[700px] flex-col justify-between bg-white p-4">

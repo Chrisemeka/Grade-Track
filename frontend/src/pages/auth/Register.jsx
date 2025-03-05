@@ -1,6 +1,8 @@
+import { useNavigate } from "react-router-dom";
 import React, { useState } from 'react';
 
 const Register = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -11,6 +13,7 @@ const Register = () => {
   });
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState(''); // For success message
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -24,6 +27,43 @@ const Register = () => {
     }
 
     console.log(formData);
+
+    try {
+      const response = await fetch('/api/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          first_name: formData.firstName,
+          last_name: formData.lastName,
+          email: formData.email,
+          password: formData.password,
+          role: formData.role
+        })
+      });
+
+      const data = await response.json();
+
+      // if (!response.ok) {
+      //   // Handle errors returned from the API
+      //   setError(data.error || data.message || 'Registration failed');
+      // } else {
+      //   // Registration successful
+      //   setMessage(data.message || 'Registration successful!');
+      //   // Optionally, redirect or reset the form
+      // }
+      if (response.ok) {
+        alert("Registration successful! Redirecting to login...");
+        navigate("/login"); // Redirect to login page after success
+      } else {
+        alert(data.message); // Show error message
+      }
+    } catch (err) {
+      setError('An error occurred while registering');
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleChange = (e) => {
@@ -33,6 +73,8 @@ const Register = () => {
       [name]: value
     }));
   };
+
+  
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#f8fafb] p-4">
@@ -142,6 +184,7 @@ const Register = () => {
                 <option value="student">Student</option>
                 <option value="lecturer">Lecturer</option>
                 <option value="parent">Parent</option>
+                <option value="admin">Admin</option>
               </select>
             </div>
 

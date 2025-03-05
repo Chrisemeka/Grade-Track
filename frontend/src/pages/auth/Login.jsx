@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const [credentials, setCredentials] = useState({
@@ -8,12 +9,66 @@ const Login = () => {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
+  const navigate = useNavigate(); // Initialize navigation
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
     setError('');
 
     console.log(credentials);
+
+    try {
+      const response = await fetch("/api/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(credentials),
+      });
+
+      const data = await response.json();
+
+      // if (response.ok) {
+      //   // Store token and user data
+      //   localStorage.setItem("token", data.token);
+      //   localStorage.setItem("user", JSON.stringify(data.user));
+
+      //   // Redirect to the dashboard
+      //   navigate("/dashboard");
+      // } else {
+      //   // Handle login error
+      //   setError(data.message || "Invalid credentials");
+      // }
+      // } catch (error) {
+      //   setError("Something went wrong. Please try again.");
+      // } finally {
+      //   setLoading(false);
+      // }
+
+      if (!response.ok) {
+        throw new Error(data.message || 'Login failed');
+      }
+  
+      // Assuming the API returns a token and role
+      localStorage.setItem('token', data.token);
+      localStorage.setItem('user', JSON.stringify(data.user));
+  
+      // Redirect based on role
+      if (data.user.role === 'admin') {
+        navigate('/admin');
+      } else if (data.user.role === 'lecturer') {
+        navigate('/lecturer');
+      } else if (data.user.role === 'student') {
+        navigate('/student');
+      } else if (data.user.role === 'parent') {
+        navigate('/parent');
+      }
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
