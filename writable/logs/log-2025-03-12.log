@@ -1,0 +1,457 @@
+INFO - 2025-03-12 15:15:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-03-12 17:03:41 --> Array
+(
+    [0] => Array
+        (
+            [class_id] => 1
+            [class_name] => Testing Class
+            [lecturer_id] => 1
+            [start_date] => 2025-03-10
+            [end_date] => 2025-03-10
+            [created_at] => 2025-03-10 17:34:19
+            [updated_at] => 2025-03-10 17:34:19
+            [invite_code] => 32534A
+        )
+
+    [1] => Array
+        (
+            [class_id] => 2
+            [class_name] => Testing Class2
+            [lecturer_id] => 1
+            [start_date] => 2025-03-10
+            [end_date] => 2025-03-11
+            [created_at] => 2025-03-10 17:42:04
+            [updated_at] => 2025-03-10 17:42:04
+            [invite_code] => 4F1AE7
+        )
+
+    [2] => Array
+        (
+            [class_id] => 3
+            [class_name] => Testing Class3
+            [lecturer_id] => 1
+            [start_date] => 2025-03-12
+            [end_date] => 2025-03-13
+            [created_at] => 2025-03-10 17:46:39
+            [updated_at] => 2025-03-10 17:46:39
+            [invite_code] => F9D223
+        )
+
+    [3] => Array
+        (
+            [class_id] => 4
+            [class_name] => Testing Class4
+            [lecturer_id] => 1
+            [start_date] => 2025-03-12
+            [end_date] => 2025-03-13
+            [created_at] => 2025-03-10 17:54:40
+            [updated_at] => 2025-03-10 17:54:40
+            [invite_code] => 6BE2CF
+        )
+
+    [4] => Array
+        (
+            [class_id] => 5
+            [class_name] => Testing Class5
+            [lecturer_id] => 1
+            [start_date] => 2025-03-26
+            [end_date] => 2025-03-22
+            [created_at] => 2025-03-10 18:05:19
+            [updated_at] => 2025-03-10 18:05:19
+            [invite_code] => 45DC81
+        )
+
+    [5] => Array
+        (
+            [class_id] => 6
+            [class_name] => Testing Class6
+            [lecturer_id] => 1
+            [start_date] => 2025-03-17
+            [end_date] => 2025-03-18
+            [created_at] => 2025-03-10 18:21:52
+            [updated_at] => 2025-03-10 18:21:52
+            [invite_code] => 3F1CB9
+        )
+
+)
+
+ERROR - 2025-03-12 17:03:41 --> Array
+(
+    [0] => Array
+        (
+            [class_id] => 1
+            [class_name] => Testing Class
+            [lecturer_id] => 1
+            [start_date] => 2025-03-10
+            [end_date] => 2025-03-10
+            [created_at] => 2025-03-10 17:34:19
+            [updated_at] => 2025-03-10 17:34:19
+            [invite_code] => 32534A
+        )
+
+    [1] => Array
+        (
+            [class_id] => 2
+            [class_name] => Testing Class2
+            [lecturer_id] => 1
+            [start_date] => 2025-03-10
+            [end_date] => 2025-03-11
+            [created_at] => 2025-03-10 17:42:04
+            [updated_at] => 2025-03-10 17:42:04
+            [invite_code] => 4F1AE7
+        )
+
+    [2] => Array
+        (
+            [class_id] => 3
+            [class_name] => Testing Class3
+            [lecturer_id] => 1
+            [start_date] => 2025-03-12
+            [end_date] => 2025-03-13
+            [created_at] => 2025-03-10 17:46:39
+            [updated_at] => 2025-03-10 17:46:39
+            [invite_code] => F9D223
+        )
+
+    [3] => Array
+        (
+            [class_id] => 4
+            [class_name] => Testing Class4
+            [lecturer_id] => 1
+            [start_date] => 2025-03-12
+            [end_date] => 2025-03-13
+            [created_at] => 2025-03-10 17:54:40
+            [updated_at] => 2025-03-10 17:54:40
+            [invite_code] => 6BE2CF
+        )
+
+    [4] => Array
+        (
+            [class_id] => 5
+            [class_name] => Testing Class5
+            [lecturer_id] => 1
+            [start_date] => 2025-03-26
+            [end_date] => 2025-03-22
+            [created_at] => 2025-03-10 18:05:19
+            [updated_at] => 2025-03-10 18:05:19
+            [invite_code] => 45DC81
+        )
+
+    [5] => Array
+        (
+            [class_id] => 6
+            [class_name] => Testing Class6
+            [lecturer_id] => 1
+            [start_date] => 2025-03-17
+            [end_date] => 2025-03-18
+            [created_at] => 2025-03-10 18:21:52
+            [updated_at] => 2025-03-10 18:21:52
+            [invite_code] => 3F1CB9
+        )
+
+)
+
+ERROR - 2025-03-12 17:07:42 --> Array
+(
+    [0] => Array
+        (
+            [class_id] => 1
+            [class_name] => Testing Class
+            [lecturer_id] => 1
+            [start_date] => 2025-03-10
+            [end_date] => 2025-03-10
+            [created_at] => 2025-03-10 17:34:19
+            [updated_at] => 2025-03-10 17:34:19
+            [invite_code] => 32534A
+        )
+
+    [1] => Array
+        (
+            [class_id] => 2
+            [class_name] => Testing Class2
+            [lecturer_id] => 1
+            [start_date] => 2025-03-10
+            [end_date] => 2025-03-11
+            [created_at] => 2025-03-10 17:42:04
+            [updated_at] => 2025-03-10 17:42:04
+            [invite_code] => 4F1AE7
+        )
+
+    [2] => Array
+        (
+            [class_id] => 3
+            [class_name] => Testing Class3
+            [lecturer_id] => 1
+            [start_date] => 2025-03-12
+            [end_date] => 2025-03-13
+            [created_at] => 2025-03-10 17:46:39
+            [updated_at] => 2025-03-10 17:46:39
+            [invite_code] => F9D223
+        )
+
+    [3] => Array
+        (
+            [class_id] => 4
+            [class_name] => Testing Class4
+            [lecturer_id] => 1
+            [start_date] => 2025-03-12
+            [end_date] => 2025-03-13
+            [created_at] => 2025-03-10 17:54:40
+            [updated_at] => 2025-03-10 17:54:40
+            [invite_code] => 6BE2CF
+        )
+
+    [4] => Array
+        (
+            [class_id] => 5
+            [class_name] => Testing Class5
+            [lecturer_id] => 1
+            [start_date] => 2025-03-26
+            [end_date] => 2025-03-22
+            [created_at] => 2025-03-10 18:05:19
+            [updated_at] => 2025-03-10 18:05:19
+            [invite_code] => 45DC81
+        )
+
+    [5] => Array
+        (
+            [class_id] => 6
+            [class_name] => Testing Class6
+            [lecturer_id] => 1
+            [start_date] => 2025-03-17
+            [end_date] => 2025-03-18
+            [created_at] => 2025-03-10 18:21:52
+            [updated_at] => 2025-03-10 18:21:52
+            [invite_code] => 3F1CB9
+        )
+
+)
+
+ERROR - 2025-03-12 17:07:42 --> Array
+(
+    [0] => Array
+        (
+            [class_id] => 1
+            [class_name] => Testing Class
+            [lecturer_id] => 1
+            [start_date] => 2025-03-10
+            [end_date] => 2025-03-10
+            [created_at] => 2025-03-10 17:34:19
+            [updated_at] => 2025-03-10 17:34:19
+            [invite_code] => 32534A
+        )
+
+    [1] => Array
+        (
+            [class_id] => 2
+            [class_name] => Testing Class2
+            [lecturer_id] => 1
+            [start_date] => 2025-03-10
+            [end_date] => 2025-03-11
+            [created_at] => 2025-03-10 17:42:04
+            [updated_at] => 2025-03-10 17:42:04
+            [invite_code] => 4F1AE7
+        )
+
+    [2] => Array
+        (
+            [class_id] => 3
+            [class_name] => Testing Class3
+            [lecturer_id] => 1
+            [start_date] => 2025-03-12
+            [end_date] => 2025-03-13
+            [created_at] => 2025-03-10 17:46:39
+            [updated_at] => 2025-03-10 17:46:39
+            [invite_code] => F9D223
+        )
+
+    [3] => Array
+        (
+            [class_id] => 4
+            [class_name] => Testing Class4
+            [lecturer_id] => 1
+            [start_date] => 2025-03-12
+            [end_date] => 2025-03-13
+            [created_at] => 2025-03-10 17:54:40
+            [updated_at] => 2025-03-10 17:54:40
+            [invite_code] => 6BE2CF
+        )
+
+    [4] => Array
+        (
+            [class_id] => 5
+            [class_name] => Testing Class5
+            [lecturer_id] => 1
+            [start_date] => 2025-03-26
+            [end_date] => 2025-03-22
+            [created_at] => 2025-03-10 18:05:19
+            [updated_at] => 2025-03-10 18:05:19
+            [invite_code] => 45DC81
+        )
+
+    [5] => Array
+        (
+            [class_id] => 6
+            [class_name] => Testing Class6
+            [lecturer_id] => 1
+            [start_date] => 2025-03-17
+            [end_date] => 2025-03-18
+            [created_at] => 2025-03-10 18:21:52
+            [updated_at] => 2025-03-10 18:21:52
+            [invite_code] => 3F1CB9
+        )
+
+)
+
+ERROR - 2025-03-12 17:07:46 --> Array
+(
+    [0] => Array
+        (
+            [class_id] => 1
+            [class_name] => Testing Class
+            [lecturer_id] => 1
+            [start_date] => 2025-03-10
+            [end_date] => 2025-03-10
+            [created_at] => 2025-03-10 17:34:19
+            [updated_at] => 2025-03-10 17:34:19
+            [invite_code] => 32534A
+        )
+
+    [1] => Array
+        (
+            [class_id] => 2
+            [class_name] => Testing Class2
+            [lecturer_id] => 1
+            [start_date] => 2025-03-10
+            [end_date] => 2025-03-11
+            [created_at] => 2025-03-10 17:42:04
+            [updated_at] => 2025-03-10 17:42:04
+            [invite_code] => 4F1AE7
+        )
+
+    [2] => Array
+        (
+            [class_id] => 3
+            [class_name] => Testing Class3
+            [lecturer_id] => 1
+            [start_date] => 2025-03-12
+            [end_date] => 2025-03-13
+            [created_at] => 2025-03-10 17:46:39
+            [updated_at] => 2025-03-10 17:46:39
+            [invite_code] => F9D223
+        )
+
+    [3] => Array
+        (
+            [class_id] => 4
+            [class_name] => Testing Class4
+            [lecturer_id] => 1
+            [start_date] => 2025-03-12
+            [end_date] => 2025-03-13
+            [created_at] => 2025-03-10 17:54:40
+            [updated_at] => 2025-03-10 17:54:40
+            [invite_code] => 6BE2CF
+        )
+
+    [4] => Array
+        (
+            [class_id] => 5
+            [class_name] => Testing Class5
+            [lecturer_id] => 1
+            [start_date] => 2025-03-26
+            [end_date] => 2025-03-22
+            [created_at] => 2025-03-10 18:05:19
+            [updated_at] => 2025-03-10 18:05:19
+            [invite_code] => 45DC81
+        )
+
+    [5] => Array
+        (
+            [class_id] => 6
+            [class_name] => Testing Class6
+            [lecturer_id] => 1
+            [start_date] => 2025-03-17
+            [end_date] => 2025-03-18
+            [created_at] => 2025-03-10 18:21:52
+            [updated_at] => 2025-03-10 18:21:52
+            [invite_code] => 3F1CB9
+        )
+
+)
+
+ERROR - 2025-03-12 17:07:47 --> Array
+(
+    [0] => Array
+        (
+            [class_id] => 1
+            [class_name] => Testing Class
+            [lecturer_id] => 1
+            [start_date] => 2025-03-10
+            [end_date] => 2025-03-10
+            [created_at] => 2025-03-10 17:34:19
+            [updated_at] => 2025-03-10 17:34:19
+            [invite_code] => 32534A
+        )
+
+    [1] => Array
+        (
+            [class_id] => 2
+            [class_name] => Testing Class2
+            [lecturer_id] => 1
+            [start_date] => 2025-03-10
+            [end_date] => 2025-03-11
+            [created_at] => 2025-03-10 17:42:04
+            [updated_at] => 2025-03-10 17:42:04
+            [invite_code] => 4F1AE7
+        )
+
+    [2] => Array
+        (
+            [class_id] => 3
+            [class_name] => Testing Class3
+            [lecturer_id] => 1
+            [start_date] => 2025-03-12
+            [end_date] => 2025-03-13
+            [created_at] => 2025-03-10 17:46:39
+            [updated_at] => 2025-03-10 17:46:39
+            [invite_code] => F9D223
+        )
+
+    [3] => Array
+        (
+            [class_id] => 4
+            [class_name] => Testing Class4
+            [lecturer_id] => 1
+            [start_date] => 2025-03-12
+            [end_date] => 2025-03-13
+            [created_at] => 2025-03-10 17:54:40
+            [updated_at] => 2025-03-10 17:54:40
+            [invite_code] => 6BE2CF
+        )
+
+    [4] => Array
+        (
+            [class_id] => 5
+            [class_name] => Testing Class5
+            [lecturer_id] => 1
+            [start_date] => 2025-03-26
+            [end_date] => 2025-03-22
+            [created_at] => 2025-03-10 18:05:19
+            [updated_at] => 2025-03-10 18:05:19
+            [invite_code] => 45DC81
+        )
+
+    [5] => Array
+        (
+            [class_id] => 6
+            [class_name] => Testing Class6
+            [lecturer_id] => 1
+            [start_date] => 2025-03-17
+            [end_date] => 2025-03-18
+            [created_at] => 2025-03-10 18:21:52
+            [updated_at] => 2025-03-10 18:21:52
+            [invite_code] => 3F1CB9
+        )
+
+)
+

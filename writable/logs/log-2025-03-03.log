@@ -1,0 +1,276 @@
+CRITICAL - 2025-03-03 19:26:09 --> ErrorException: Attempt to read property "password" on null
+in APPPATH\Controllers\API\AuthController.php on line 18.
+ 1 APPPATH\Controllers\API\AuthController.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "password" on null', 'C:\\xampp\\htdocs\\GRADE-TRACK-LOGIC\\app\\Controllers\\API\\AuthController.php', 18)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\API\AuthController->register()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\AuthController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\GRADE-TRACK-LOGIC\\public\\index.php')
+CRITICAL - 2025-03-03 19:44:02 --> ErrorException: Attempt to read property "password" on null
+in APPPATH\Controllers\API\AuthController.php on line 18.
+ 1 APPPATH\Controllers\API\AuthController.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "password" on null', 'C:\\xampp\\htdocs\\GRADE-TRACK-LOGIC\\app\\Controllers\\API\\AuthController.php', 18)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\API\AuthController->register()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\AuthController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\GRADE-TRACK-LOGIC\\public\\index.php')
+CRITICAL - 2025-03-03 19:44:08 --> ErrorException: Attempt to read property "password" on null
+in APPPATH\Controllers\API\AuthController.php on line 18.
+ 1 APPPATH\Controllers\API\AuthController.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "password" on null', 'C:\\xampp\\htdocs\\GRADE-TRACK-LOGIC\\app\\Controllers\\API\\AuthController.php', 18)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\API\AuthController->register()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\AuthController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\GRADE-TRACK-LOGIC\\public\\index.php')
+CRITICAL - 2025-03-03 19:48:44 --> CodeIgniter\HTTP\Exceptions\HTTPException: Failed to parse JSON string. Error: Syntax error
+in SYSTEMPATH\HTTP\IncomingRequest.php on line 588.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(588): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidJSON('Syntax error')
+ 2 APPPATH\Controllers\API\AuthController.php(15): CodeIgniter\HTTP\IncomingRequest->getJSON()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\API\AuthController->register()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\AuthController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\GRADE-TRACK-LOGIC\\public\\index.php')
+CRITICAL - 2025-03-03 19:51:19 --> CodeIgniter\HTTP\Exceptions\HTTPException: Failed to parse JSON string. Error: Syntax error
+in SYSTEMPATH\HTTP\IncomingRequest.php on line 588.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(588): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidJSON('Syntax error')
+ 2 APPPATH\Controllers\API\AuthController.php(15): CodeIgniter\HTTP\IncomingRequest->getJSON()
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\API\AuthController->register()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\AuthController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\GRADE-TRACK-LOGIC\\public\\index.php')
+ERROR - 2025-03-03 19:54:14 --> mysqli_sql_exception: Table 'grade_track_db.students' doesn't exist in C:\xampp\htdocs\GRADE-TRACK-LOGIC\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\GRADE-TRACK-LOGIC\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `st...', 0)
+#1 C:\xampp\htdocs\GRADE-TRACK-LOGIC\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `st...')
+#2 C:\xampp\htdocs\GRADE-TRACK-LOGIC\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `st...')
+#3 C:\xampp\htdocs\GRADE-TRACK-LOGIC\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#4 C:\xampp\htdocs\GRADE-TRACK-LOGIC\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\GRADE-TRACK-LOGIC\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\GRADE-TRACK-LOGIC\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\GRADE-TRACK-LOGIC\app\Controllers\API\AuthController.php(38): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\GRADE-TRACK-LOGIC\system\CodeIgniter.php(941): App\Controllers\API\AuthController->register()
+#9 C:\xampp\htdocs\GRADE-TRACK-LOGIC\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\AuthController))
+#10 C:\xampp\htdocs\GRADE-TRACK-LOGIC\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\GRADE-TRACK-LOGIC\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\GRADE-TRACK-LOGIC\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-03-03 19:54:14 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'grade_track_db.students' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `students` (`first_name`, `last_name`, `email`, `password`) VALUES (:first_name:, :last_name:, :email:, :password:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\API\AuthController.php(38): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\API\AuthController->register()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\AuthController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\GRADE-TRACK-LOGIC\\public\\index.php')
+CRITICAL - 2025-03-03 19:54:14 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'grade_track_db.students' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `students` (`first_name`, `last_name`, `email`, `password`) VALUES (\'Username\', \'Nameuser\', \'john.doe@example.com\', \'$2y$10$mZqRrgqqaKEiCBRHu50xnOjvLsH/.4v8kpduIBiVDyuLaOv/wNf52\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `students` (`first_name`, `last_name`, `email`, `password`) VALUES (\'Username\', \'Nameuser\', \'john.doe@example.com\', \'$2y$10$mZqRrgqqaKEiCBRHu50xnOjvLsH/.4v8kpduIBiVDyuLaOv/wNf52\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `students` (`first_name`, `last_name`, `email`, `password`) VALUES (:first_name:, :last_name:, :email:, :password:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\API\AuthController.php(38): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\API\AuthController->register()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\AuthController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\GRADE-TRACK-LOGIC\\public\\index.php')
+CRITICAL - 2025-03-03 19:54:14 --> [Caused by] mysqli_sql_exception: Table 'grade_track_db.students' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `students` (`first_name`, `last_name`, `email`, `password`) VALUES (\'Username\', \'Nameuser\', \'john.doe@example.com\', \'$2y$10$mZqRrgqqaKEiCBRHu50xnOjvLsH/.4v8kpduIBiVDyuLaOv/wNf52\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `students` (`first_name`, `last_name`, `email`, `password`) VALUES (\'Username\', \'Nameuser\', \'john.doe@example.com\', \'$2y$10$mZqRrgqqaKEiCBRHu50xnOjvLsH/.4v8kpduIBiVDyuLaOv/wNf52\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `students` (`first_name`, `last_name`, `email`, `password`) VALUES (\'Username\', \'Nameuser\', \'john.doe@example.com\', \'$2y$10$mZqRrgqqaKEiCBRHu50xnOjvLsH/.4v8kpduIBiVDyuLaOv/wNf52\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `students` (`first_name`, `last_name`, `email`, `password`) VALUES (:first_name:, :last_name:, :email:, :password:)', [...], false)
+ 5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\API\AuthController.php(38): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\API\AuthController->register()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\AuthController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\GRADE-TRACK-LOGIC\\public\\index.php')
+ERROR - 2025-03-03 19:55:44 --> mysqli_sql_exception: Unknown column 'first_name' in 'field list' in C:\xampp\htdocs\GRADE-TRACK-LOGIC\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\GRADE-TRACK-LOGIC\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `st...', 0)
+#1 C:\xampp\htdocs\GRADE-TRACK-LOGIC\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `st...')
+#2 C:\xampp\htdocs\GRADE-TRACK-LOGIC\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `st...')
+#3 C:\xampp\htdocs\GRADE-TRACK-LOGIC\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#4 C:\xampp\htdocs\GRADE-TRACK-LOGIC\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\GRADE-TRACK-LOGIC\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\GRADE-TRACK-LOGIC\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\GRADE-TRACK-LOGIC\app\Controllers\API\AuthController.php(38): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\GRADE-TRACK-LOGIC\system\CodeIgniter.php(941): App\Controllers\API\AuthController->register()
+#9 C:\xampp\htdocs\GRADE-TRACK-LOGIC\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\AuthController))
+#10 C:\xampp\htdocs\GRADE-TRACK-LOGIC\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\GRADE-TRACK-LOGIC\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\GRADE-TRACK-LOGIC\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-03-03 19:55:44 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'first_name' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `student` (`first_name`, `last_name`, `email`, `password`) VALUES (:first_name:, :last_name:, :email:, :password:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\API\AuthController.php(38): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\API\AuthController->register()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\AuthController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\GRADE-TRACK-LOGIC\\public\\index.php')
+CRITICAL - 2025-03-03 19:55:44 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'first_name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `student` (`first_name`, `last_name`, `email`, `password`) VALUES (\'Username\', \'Nameuser\', \'john.doe@example.com\', \'$2y$10$6grz4aNNXHmamtw39iVPG.6X2WwYoPhrUQQzxXnwt0lt7Wt1ZCSEW\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `student` (`first_name`, `last_name`, `email`, `password`) VALUES (\'Username\', \'Nameuser\', \'john.doe@example.com\', \'$2y$10$6grz4aNNXHmamtw39iVPG.6X2WwYoPhrUQQzxXnwt0lt7Wt1ZCSEW\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `student` (`first_name`, `last_name`, `email`, `password`) VALUES (:first_name:, :last_name:, :email:, :password:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\API\AuthController.php(38): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\API\AuthController->register()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\AuthController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\GRADE-TRACK-LOGIC\\public\\index.php')
+CRITICAL - 2025-03-03 19:55:44 --> [Caused by] mysqli_sql_exception: Unknown column 'first_name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `student` (`first_name`, `last_name`, `email`, `password`) VALUES (\'Username\', \'Nameuser\', \'john.doe@example.com\', \'$2y$10$6grz4aNNXHmamtw39iVPG.6X2WwYoPhrUQQzxXnwt0lt7Wt1ZCSEW\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `student` (`first_name`, `last_name`, `email`, `password`) VALUES (\'Username\', \'Nameuser\', \'john.doe@example.com\', \'$2y$10$6grz4aNNXHmamtw39iVPG.6X2WwYoPhrUQQzxXnwt0lt7Wt1ZCSEW\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `student` (`first_name`, `last_name`, `email`, `password`) VALUES (\'Username\', \'Nameuser\', \'john.doe@example.com\', \'$2y$10$6grz4aNNXHmamtw39iVPG.6X2WwYoPhrUQQzxXnwt0lt7Wt1ZCSEW\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `student` (`first_name`, `last_name`, `email`, `password`) VALUES (:first_name:, :last_name:, :email:, :password:)', [...], false)
+ 5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\API\AuthController.php(38): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\API\AuthController->register()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\AuthController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\GRADE-TRACK-LOGIC\\public\\index.php')
+ERROR - 2025-03-03 19:56:51 --> mysqli_sql_exception: Unknown column 'password' in 'field list' in C:\xampp\htdocs\GRADE-TRACK-LOGIC\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\GRADE-TRACK-LOGIC\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `st...', 0)
+#1 C:\xampp\htdocs\GRADE-TRACK-LOGIC\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `st...')
+#2 C:\xampp\htdocs\GRADE-TRACK-LOGIC\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `st...')
+#3 C:\xampp\htdocs\GRADE-TRACK-LOGIC\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#4 C:\xampp\htdocs\GRADE-TRACK-LOGIC\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\GRADE-TRACK-LOGIC\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\GRADE-TRACK-LOGIC\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\GRADE-TRACK-LOGIC\app\Controllers\API\AuthController.php(38): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\GRADE-TRACK-LOGIC\system\CodeIgniter.php(941): App\Controllers\API\AuthController->register()
+#9 C:\xampp\htdocs\GRADE-TRACK-LOGIC\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\AuthController))
+#10 C:\xampp\htdocs\GRADE-TRACK-LOGIC\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\GRADE-TRACK-LOGIC\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\GRADE-TRACK-LOGIC\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-03-03 19:56:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'password' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `student` (`password`) VALUES (:password:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\API\AuthController.php(38): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\API\AuthController->register()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\AuthController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\GRADE-TRACK-LOGIC\\public\\index.php')
+CRITICAL - 2025-03-03 19:56:51 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'password' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `student` (`password`) VALUES (\'$2y$10$9C6b1ILh5aza1eZ5B80rX.qYdxEMnz4J3ly6fg6hW2Opi4PROj7F2\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `student` (`password`) VALUES (\'$2y$10$9C6b1ILh5aza1eZ5B80rX.qYdxEMnz4J3ly6fg6hW2Opi4PROj7F2\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `student` (`password`) VALUES (:password:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\API\AuthController.php(38): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\API\AuthController->register()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\AuthController))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\GRADE-TRACK-LOGIC\\public\\index.php')
+CRITICAL - 2025-03-03 19:56:51 --> [Caused by] mysqli_sql_exception: Unknown column 'password' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `student` (`password`) VALUES (\'$2y$10$9C6b1ILh5aza1eZ5B80rX.qYdxEMnz4J3ly6fg6hW2Opi4PROj7F2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `student` (`password`) VALUES (\'$2y$10$9C6b1ILh5aza1eZ5B80rX.qYdxEMnz4J3ly6fg6hW2Opi4PROj7F2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `student` (`password`) VALUES (\'$2y$10$9C6b1ILh5aza1eZ5B80rX.qYdxEMnz4J3ly6fg6hW2Opi4PROj7F2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `student` (`password`) VALUES (:password:)', [...], false)
+ 5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\API\AuthController.php(38): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\API\AuthController->register()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\AuthController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\GRADE-TRACK-LOGIC\\public\\index.php')
+CRITICAL - 2025-03-03 19:58:05 --> CodeIgniter\Database\Exceptions\DataException: There is no data to insert.
+in SYSTEMPATH\BaseModel.php on line 788.
+ 1 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([], true)
+ 3 APPPATH\Controllers\API\AuthController.php(38): CodeIgniter\Model->insert([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\API\AuthController->register()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\AuthController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\GRADE-TRACK-LOGIC\\public\\index.php')
+CRITICAL - 2025-03-03 20:01:50 --> CodeIgniter\Database\Exceptions\DataException: There is no data to insert.
+in SYSTEMPATH\BaseModel.php on line 788.
+ 1 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([], true)
+ 3 APPPATH\Controllers\API\AuthController.php(45): CodeIgniter\Model->insert([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\API\AuthController->register()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\AuthController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\GRADE-TRACK-LOGIC\\public\\index.php')
+DEBUG - 2025-03-03 20:12:04 --> User data: {"first_name":"Username","last_name":"Nameuser","email":"username@example.com","password":"$2y$10$m7Zh\/F8GJnB7gBvCjxbmR.Uzev7IvDiH\/Y8aRk.vHCh69ZD2ArzSu"}
+CRITICAL - 2025-03-03 20:12:04 --> CodeIgniter\Database\Exceptions\DataException: There is no data to insert.
+in SYSTEMPATH\BaseModel.php on line 788.
+ 1 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([], true)
+ 3 APPPATH\Controllers\API\AuthController.php(94): CodeIgniter\Model->insert([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\API\AuthController->register()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\AuthController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\GRADE-TRACK-LOGIC\\public\\index.php')
+DEBUG - 2025-03-03 20:12:26 --> User data: {"first_name":"Username","last_name":"Nameuser","email":"username@example.com","password":"$2y$10$s9Ck3uBOeBYyEJoBeWor\/ue7tx8q1SG7Z9Lf4N8.neeSN6SXB064q"}
+CRITICAL - 2025-03-03 20:12:26 --> CodeIgniter\Database\Exceptions\DataException: There is no data to insert.
+in SYSTEMPATH\BaseModel.php on line 788.
+ 1 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([], true)
+ 3 APPPATH\Controllers\API\AuthController.php(94): CodeIgniter\Model->insert([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\API\AuthController->register()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\AuthController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\GRADE-TRACK-LOGIC\\public\\index.php')
+DEBUG - 2025-03-03 20:25:33 --> User data: {"first_name":"Username","last_name":"Nameuser","email":"username@example.com","password":"$2y$10$Sdp1DqlkSjhwHMNsXABZfeXKDRJjX5OpeLJo1TPV7IDNu0YswtOze"}
+DEBUG - 2025-03-03 20:25:33 --> Raw Input: {
+    "first_name": "Username",
+    "last_name": "Nameuser",
+    "email": "username@example.com",
+    "password": "11111",
+    "role": "student"
+}
+
+DEBUG - 2025-03-03 20:25:33 --> JSON: {"first_name":"Username","last_name":"Nameuser","email":"username@example.com","password":"11111","role":"student"}
+CRITICAL - 2025-03-03 20:25:33 --> CodeIgniter\Database\Exceptions\DataException: There is no data to insert.
+in SYSTEMPATH\BaseModel.php on line 788.
+ 1 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([], true)
+ 3 APPPATH\Controllers\API\AuthController.php(97): CodeIgniter\Model->insert([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\API\AuthController->register()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\AuthController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\GRADE-TRACK-LOGIC\\public\\index.php')
+DEBUG - 2025-03-03 20:33:56 --> User Data to Insert: {"student_first_name":"Username","student_last_name":"Nameuser","student_email":"username@example.com","student_password":"$2y$10$UakRSQ9BeOO7HUzn7PBSouuWf2wudM6DQhhYtpuN\/XfPwmvorxyE6"}
