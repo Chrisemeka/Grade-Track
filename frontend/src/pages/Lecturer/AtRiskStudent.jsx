@@ -24,7 +24,7 @@ const AtRiskStudent = () => {
       class: 'cs101',
       className: 'Introduction to Computer Science',
       riskLevel: 'high',
-      riskScore: 85,
+      riskScore: 25,
       lastActive: '2 days ago',
       flagged: true,
       flaggedReason: 'Missed three consecutive classes',
@@ -37,7 +37,7 @@ const AtRiskStudent = () => {
       class: 'cs101',
       className: 'Introduction to Computer Science',
       riskLevel: 'medium',
-      riskScore: 65,
+      riskScore: 35,
       lastActive: '1 day ago',
       flagged: false,
       flaggedReason: '',
@@ -50,7 +50,7 @@ const AtRiskStudent = () => {
       class: 'cs201',
       className: 'Data Structures and Algorithms',
       riskLevel: 'high',
-      riskScore: 90,
+      riskScore: 15,
       lastActive: '3 days ago',
       flagged: true,
       flaggedReason: 'Missed multiple assignments',
@@ -76,7 +76,7 @@ const AtRiskStudent = () => {
       class: 'cs301',
       className: 'Database Systems',
       riskLevel: 'medium',
-      riskScore: 60,
+      riskScore: 30,
       lastActive: '1 day ago',
       flagged: true,
       flaggedReason: 'Poor performance on midterm',
@@ -253,9 +253,9 @@ const AtRiskStudent = () => {
                 <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-[#0e161b] uppercase tracking-wider">
                   Risk Level
                 </th>
-                {/* <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-[#0e161b] uppercase tracking-wider">
-                  Risk Factor
-                </th> */}
+                <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-[#0e161b] uppercase tracking-wider">
+                  Score
+                </th>
                 <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-[#0e161b] uppercase tracking-wider">
                   Last Active
                 </th>
@@ -303,9 +303,9 @@ const AtRiskStudent = () => {
                       {student.riskLevel.charAt(0).toUpperCase() + student.riskLevel.slice(1)} Risk
                     </span>
                   </td>
-                  {/* <td className="px-6 py-4 whitespace-nowrap text-sm text-[#0e161b]">
-                    {student.riskFactor.charAt(0).toUpperCase() + student.riskFactor.slice(1)}
-                  </td> */}
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-[#0e161b]">
+                    {student.riskScore}
+                  </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-[#507a95]">
                     {student.lastActive}
                   </td>

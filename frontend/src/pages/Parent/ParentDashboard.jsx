@@ -4,14 +4,14 @@ import { UserPlus, X, Check, Award } from 'lucide-react';
 const ParentDashboard = () => {
   // State for managing children
   const [children, setChildren] = useState([
-    { id: 1, name: 'Emily Johnson', matricNumber: 'BU/21/04/05/001', department: 'Computer Science', level: '100 Level', performance: 'Excellent', cgpa: '3.8' },
-    { id: 2, name: 'Michael Johnson', matricNumber: 'BU/19/04/05/023', department: 'Accounting', level: '300 Level', performance: 'Good', cgpa: '3.5' },
+    { id: 1, name: 'Emily Johnson', student_id: 'BU/21/04/05/001', department: 'Computer Science', level: '100 Level', performance: 'Excellent', cgpa: '3.8' },
+    { id: 2, name: 'Michael Johnson', student_id: 'BU/19/04/05/023', department: 'Accounting', level: '300 Level', performance: 'Good', cgpa: '3.5' },
   ]);
 
   // State for modal
   const [showModal, setShowModal] = useState(false);
   const [formData, setFormData] = useState({
-    matricNumber: '',
+    student_id: '',
     department: ''
   });
   const [formErrors, setFormErrors] = useState({});
@@ -39,10 +39,10 @@ const ParentDashboard = () => {
   const validateForm = () => {
     const errors = {};
     
-    if (!formData.matricNumber.trim()) {
-      errors.matricNumber = 'Matriculation number is required';
-    } else if (!/^[A-Z]{2}\/\d{2}\/\d{2}\/\d{2}\/\d{3}$/.test(formData.matricNumber)) {
-      errors.matricNumber = 'Invalid format. Expected: XX/00/00/00/000';
+    if (!formData.student_id.trim()) {
+      errors.student_id = 'Matriculation number is required';
+    } else if (!/^[A-Z]{2}\/\d{2}\/\d{2}\/\d{2}\/\d{3}$/.test(formData.student_id)) {
+      errors.student_id = 'Invalid format. Expected: XX/00/00/00/000';
     }
     
     if (!formData.department.trim()) {
@@ -70,8 +70,8 @@ const ParentDashboard = () => {
       // Mock the response from server that would include student details
       const newChild = {
         id: children.length + 1,
-        name: `Student ${formData.matricNumber}`, // In a real app, this would come from the backend
-        matricNumber: formData.matricNumber,
+        name: `Student ${formData.student_id}`, // In a real app, this would come from the backend
+        student_id: formData.student_id,
         department: formData.department,
         level: '100 Level', // Default level for new students
         performance: 'Not Available',
@@ -83,7 +83,7 @@ const ParentDashboard = () => {
       
       // Reset form
       setFormData({
-        matricNumber: '',
+        student_id: '',
         department: ''
       });
       
@@ -105,7 +105,7 @@ const ParentDashboard = () => {
   const closeModal = () => {
     setShowModal(false);
     setFormData({
-      matricNumber: '',
+      student_id: '',
       department: ''
     });
     setFormErrors({});
@@ -165,7 +165,7 @@ const ParentDashboard = () => {
                 <div className="flex flex-col gap-1 pt-2">
                   <div className="flex justify-between items-center">
                     <p className="text-[#507a95] text-xs">Matric Number:</p>
-                    <p className="text-[#0e161b] text-sm font-mono">{child.matricNumber}</p>
+                    <p className="text-[#0e161b] text-sm font-mono">{child.student_id}</p>
                   </div>
                   <div className="flex justify-between items-center">
                     <p className="text-[#507a95] text-xs">Level:</p>
@@ -238,22 +238,22 @@ const ParentDashboard = () => {
             
             <form onSubmit={handleSubmit}>
               <div className="mb-4">
-                <label htmlFor="matricNumber" className="block text-[#507a95] text-sm mb-1">
-                  Matriculation Number <span className="text-red-500">*</span>
+                <label htmlFor="student_id" className="block text-[#507a95] text-sm mb-1">
+                  Student ID <span className="text-red-500">*</span>
                 </label>
                 <input
                   type="text"
-                  id="matricNumber"
-                  name="matricNumber"
-                  value={formData.matricNumber}
+                  id="student_id"
+                  name="student_id"
+                  value={formData.student_id}
                   onChange={handleChange}
                   placeholder="e.g. BU/22/04/05/001"
                   className={`w-full border ${
-                    formErrors.matricNumber ? 'border-red-500' : 'border-[#d1dde6]'
+                    formErrors.student_id ? 'border-red-500' : 'border-[#d1dde6]'
                   } rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#1d8cd7]`}
                 />
-                {formErrors.matricNumber && (
-                  <p className="mt-1 text-red-500 text-xs">{formErrors.matricNumber}</p>
+                {formErrors.student_id && (
+                  <p className="mt-1 text-red-500 text-xs">{formErrors.student_id}</p>
                 )}
                 <p className="mt-1 text-[#507a95] text-xs">
                   Enter your child's matriculation number to link their account

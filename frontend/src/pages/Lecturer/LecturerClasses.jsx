@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { BookOpen, Users, Calendar, Copy, Bell, AlertTriangle, Trash2, Check, MoreVertical, Edit, Flag, Save, X } from 'lucide-react';
+import { BookOpen, Users, Calendar, Copy, Bell, AlertTriangle, Trash2, Check, MoreVertical, Edit, Flag, Save, X, Download } from 'lucide-react';
 
 const LecturerClasses = () => {
   // Mock data for classes
@@ -208,35 +208,44 @@ const LecturerClasses = () => {
           >
             {/* Class Header */}
             <div className="p-5 border-b border-[#d1dde6] flex justify-between items-start">
-              <div>
-                <h3 className="text-[#0e161b] text-lg font-bold">
-                  {classItem.name}
-                </h3>
-                <p className="text-[#507a95] text-sm mt-1">
-                  Class Code: {classItem.code}
-                </p>
-              </div>
-              <div className="relative">
-                <button 
-                  onClick={() => toggleDeleteConfirm(classItem.id)}
-                  className="p-2 rounded-full hover:bg-gray-100"
-                >
-                  <MoreVertical className="h-5 w-5 text-[#507a95]" />
-                </button>
-                
-                {showDeleteConfirm === classItem.id && (
-                  <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 ring-1 ring-black ring-opacity-5 z-10">
-                    <button
-                      onClick={() => handleDeleteClass(classItem.id)}
-                      className="flex w-full items-center px-4 py-2 text-sm text-red-600 hover:bg-red-50"
-                    >
-                      <Trash2 className="h-4 w-4 mr-2" />
-                      Delete Class
-                    </button>
-                  </div>
-                )}
-              </div>
+          <div>
+            <h3 className="text-[#0e161b] text-lg font-bold">
+              {classItem.name}
+            </h3>
+            <p className="text-[#507a95] text-sm mt-1">
+              Class Code: {classItem.code}
+            </p>
+          </div>
+          <div className="flex items-center gap-2">
+            <button 
+              onClick={() => downloadClassResults(classItem.id)}
+              className="p-2 rounded-full hover:bg-gray-100 text-[#1d8cd7]"
+              title="Download Results"
+            >
+              <Download className="h-5 w-5" />
+            </button>
+            <div className="relative">
+              <button 
+                onClick={() => toggleDeleteConfirm(classItem.id)}
+                className="p-2 rounded-full hover:bg-gray-100"
+              >
+                <MoreVertical className="h-5 w-5 text-[#507a95]" />
+              </button>
+              
+              {showDeleteConfirm === classItem.id && (
+                <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 ring-1 ring-black ring-opacity-5 z-10">
+                  <button
+                    onClick={() => handleDeleteClass(classItem.id)}
+                    className="flex w-full items-center px-4 py-2 text-sm text-red-600 hover:bg-red-50"
+                  >
+                    <Trash2 className="h-4 w-4 mr-2" />
+                    Delete Class
+                  </button>
+                </div>
+              )}
             </div>
+          </div>
+        </div>
 
             {/* Invite Code */}
             <div className="px-5 py-3 border-b border-[#d1dde6]">
@@ -332,7 +341,7 @@ const LecturerClasses = () => {
       {/* Modal for Viewing Class Details - No dark background */}
       {selectedClass && (
         <div className="fixed inset-0 flex items-center justify-center z-50">
-          <div className="bg-white rounded-lg w-11/12 max-w-4xl p-6 shadow-xl border border-[#d1dde6]">
+          <div className="bg-white rounded-lg w-[95%] h-[80%] p-6 shadow-xl border border-[#d1dde6]">
             <div className="flex justify-between items-center mb-4">
               <h3 className="text-[#0e161b] text-xl font-bold">{selectedClass.name}</h3>
               <button onClick={closeClassModal} className="text-[#507a95] hover:text-[#0e161b] p-2">
